@@ -7,14 +7,14 @@ inputs as (
 ,possibilities(opp, you, res) as (
 	select * 
 	from (values ('A', 'X', 4), --draw 1 + 3
-				 ('A', 'Y', 8), --win 2 + 6
-				 ('A', 'Z', 3), --lose 3 + 0
-				 ('B', 'X', 1), --lose 1 + 0
-				 ('B', 'Y', 5), --draw 2 + 3
-				 ('B', 'Z', 9), --win 3 + 6
-				 ('C', 'X', 7), --win 1 + 6
-				 ('C', 'Y', 2), --lose 2 + 0
-				 ('C', 'Z', 6), --draw 3 + 3
+		     ('A', 'Y', 8), --win 2 + 6
+		     ('A', 'Z', 3), --lose 3 + 0
+		     ('B', 'X', 1), --lose 1 + 0
+		     ('B', 'Y', 5), --draw 2 + 3
+		     ('B', 'Z', 9), --win 3 + 6
+		     ('C', 'X', 7), --win 1 + 6
+		     ('C', 'Y', 2), --lose 2 + 0
+		     ('C', 'Z', 6), --draw 3 + 3
 		) p(opp, you, res)
 )
 , game_results as (
