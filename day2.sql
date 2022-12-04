@@ -33,15 +33,16 @@ with inputs as (
 )
 ,possibilities(opp, you, res) as (
 	select * 
-	from (values ('A', 'X', 3), --lose r-s
-				 ('A', 'Y', 4), --draw r-r
-				 ('A', 'Z', 8), --win r-p
-				 ('B', 'X', 1), --lose p-r
-				 ('B', 'Y', 5), --draw p-p
-				 ('B', 'Z', 9), --win p-s
-				 ('C', 'X', 2), --lose s-p
-				 ('C', 'Y', 6), --draw s-s
-				 ('C', 'Z', 7), --win s-r
+	from (values 
+	      	 ('A', 'X', 3), --lose r-s
+		 ('A', 'Y', 4), --draw r-r
+		 ('A', 'Z', 8), --win r-p
+		 ('B', 'X', 1), --lose p-r
+		 ('B', 'Y', 5), --draw p-p
+		 ('B', 'Z', 9), --win p-s
+		 ('C', 'X', 2), --lose s-p
+		 ('C', 'Y', 6), --draw s-s
+		 ('C', 'Z', 7), --win s-r
 		) p(opp, you, res)
 )
 , game_results as (
